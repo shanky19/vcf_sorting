@@ -1,0 +1,3 @@
+module load vcftools (# load module vcftools)
+vcftools -- vcf Rhizoctonia_all.vcf --max-missing 0.95 --mac 4 --minQ 30 --recode --recode-INFO-all --out raw_Rhizoctonia # input vcf file=Rhizoctonia_all.vcf # max-missing=0.95 means keep variants that have been successfully genotyped in 95% of individual
+vcftools --vcf raw_Rhizoctonia.vcf --minDP 10 --recode --recode-INFO-all --out depth_Rhizoctonia (depth 10)
